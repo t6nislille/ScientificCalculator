@@ -17,8 +17,8 @@ public partial class App : Application
 #if WINDOWS
 	Microsoft.Maui.Handlers.WindowHandler.Mapper.AppendToMapping(nameof(IWindow), (Handler, View) =>
 	{
-		var mauiWindow = handler.VirtualView;
-		var nativeWindow = handler.PlatformView;
+		var mauiWindow = Handler.VirtualView;
+		var nativeWindow = Handler.PlatformView;
 		nativeWindow.Activate();
 		IntPtr windowHandle = WinRT.Interop.WindowNative.GetWindowHandle(nativeWindow);
 		WindowId windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(windowHandle);

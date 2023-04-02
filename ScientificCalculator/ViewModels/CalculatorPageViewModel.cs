@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
-
-namespace ScientificCalculator.ViewModels
+﻿namespace ScientificCalculator.ViewModels
 {
 
     [INotifyPropertyChanged]
@@ -40,6 +38,10 @@ namespace ScientificCalculator.ViewModels
             try
             {
                 var inputString = NormalizeInputString();
+                var expression = new Expression(inputString);
+                var result = expression.Evaluate();
+
+                CalculatedResult = result.ToString();
             }
             catch (Exception ex)
             {

@@ -5,6 +5,8 @@
         public CalculatorPage()
         {
             InitializeComponent();
+
+            BindingContext = new CalculatorPageViewModel();
         }
     }
 }
