@@ -2,7 +2,7 @@
 This Calculator App is designed to help with mathematical calculations.
 
 The app is built in .NET MAUI <br>
-Using 
+Using:
 - C#
 - XML.
 
